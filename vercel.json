@@ -1,0 +1,17 @@
+{
+    "buildCommand": "npm run docs:build",
+    "outputDirectory": "docs/.vitepress/dist",
+    "routes": [
+        {
+            "src": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": ".*\\.vercel\\.app"
+                }
+            ],
+            "status": 404,
+            "dest": "/404.html"
+        }
+    ]
+}
